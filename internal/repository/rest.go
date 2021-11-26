@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/nelbermora/go-rest-sample/internal/model"
+	"github.com/nelbermora/go-interfaces/internal/model"
 )
 
 func LlamarRest() (string, error) {

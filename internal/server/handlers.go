@@ -5,8 +5,8 @@ import (
 	"net/http"
 
 	"github.com/go-chi/chi"
-	"github.com/nelbermora/go-rest-sample/internal/model"
-	"github.com/nelbermora/go-rest-sample/internal/service"
+	"github.com/nelbermora/go-interfaces/internal/model"
+	"github.com/nelbermora/go-interfaces/internal/service"
 )
 
 func setupHandlers(router chi.Router) {
@@ -34,7 +34,7 @@ func endpointController(rw http.ResponseWriter, r *http.Request) {
 	var response model.Response
 	message, err := service.DummyFunc()
 	if err != nil {
-		response.Message = "Error al consultar DB"
+		response.Message = "Error al consultar DB: " + err.Error()
 	} else {
 		response.Message = message
 	}

@@ -1,4 +1,4 @@
-module github.com/nelbermora/go-rest-sample
+module github.com/nelbermora/go-interfaces
 
 go 1.15
 
